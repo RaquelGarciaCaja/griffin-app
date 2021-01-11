@@ -1,0 +1,35 @@
+.main {
+  height: 100vh;
+  background-color: lightcyan;
+  &__containerInput {
+    display: flex;
+    padding: 10px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__add {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  &__containerNext {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__next {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  &__table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    display: none;
+  }
+}
