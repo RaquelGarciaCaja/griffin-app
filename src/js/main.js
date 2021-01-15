@@ -36,7 +36,6 @@ function initAddParticipantListener(newObjContacts) {
     const newButton = document.createElement("button");
 
     const textButton = document.createTextNode("X");
-    console.log(allContacts[i]);
     const newContactName = document.createTextNode(allContacts[i].name);
     const newContactEmail = document.createTextNode(allContacts[i].email);
 
@@ -56,7 +55,7 @@ function initAddParticipantListener(newObjContacts) {
       deleteEachItem(ev);
     };
 
-    newButton.id = allContacts[i];
+    // newButton.id = allContacts[i];
     list.appendChild(newTr);
 
     // if (inputNameValue.length == 0 || inputEmailValue.length == 0) {
@@ -71,16 +70,19 @@ function initAddParticipantListener(newObjContacts) {
   document.querySelector(".js-inputEmail").value = "";
   document.querySelector(".js-inputName").focus();
 }
-
 function deleteEachItem(ev) {
-  const task = ev.target.id;
+  const task = ev.target;
+  console.log(task);
+
   const index = allContacts.indexOf(task);
   allContacts.splice(index, 1);
+
   initAddParticipantListener();
 }
 
 function listenTrashItem() {
   const deleteItems = document.querySelectorAll(".main__delete");
+  console.log(deleteItems);
   for (const deleteItem of deleteItems) {
     deleteItem.addEventListener("click", deleteEachItem);
   }
