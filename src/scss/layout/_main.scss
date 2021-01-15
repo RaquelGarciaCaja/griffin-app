@@ -11,8 +11,10 @@
     justify-content: center;
     align-items: center;
   }
-
-  &__add {
+  &__label {
+    padding: 0 10px;
+  }
+  &__btnAdd {
     padding: 5px 10px;
     cursor: pointer;
   }
@@ -39,5 +41,12 @@
   }
   &__eachEmailName {
     display: flex;
+  }
+  &__name-email {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(100000, 1fr);
+    gap: 20px;
+    padding: 10px;
   }
 }
